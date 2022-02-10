@@ -13,6 +13,6 @@ namespace TravelTrip.Models.Classes
         public string UserName { get; set; }
         public string Mail { get; set; }
         public string Comment { get; set; }
-        public int BlogId { get; set; }
+        public Blog Blog { get; set; }
     }
 }
