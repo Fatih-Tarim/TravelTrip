@@ -1,4 +1,4 @@
-﻿
+﻿@model TravelTrip.Models.Classes.BlogComment
 @{
     ViewBag.Title = "BlogDetail";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -20,49 +20,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!----webfonts---->
     <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
-   
+
 </head>
 <body>
     <!---header---->
     <div class="header">
-        
+
     </div>
     <!--/header-->
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    <img src="~/web2/images/post1.jpg" alt="" />
-                    <p>
-                        Lorem Ipsum is
-                    </p>
+                    @foreach (var x in Model.Value1)
+                    {
+
+                        <img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
+                        <h2 class="">@x.Title</h2>
+                        <p>
+                            @x.Description
+                        </p>
+                    }
                 </div>
+                @foreach (var y in Model.Value2) {
                 <ul class="comment-list">
                     <li>
                         <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
                         <div class="desc">
-                            <p>Fatih TARIM: Yorum kısmı </p>
+                            <p> @y.UserName : @y.Comment </p>
                         </div>
                         <div class="clearfix"></div>
                     </li>
                 </ul>
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>Burak TARIM: Buraya yorum gelecek </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
+                }
                 <div class="content-form">
-                    <h3>Leave a comment</h3>
+                    <h3>Yorum Yap!</h3>
                     <form>
-                        <input type="text" placeholder="Name" required />
-                        <input type="text" placeholder="Email" required />
-                        <input type="text" placeholder="Phone" required />
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="SEND" />
+                        <input type="text" placeholder="İsim" required />
+                        <input type="text" placeholder="Mail Adresiniz" required />
+                        <textarea placeholder="Yorumunuz"></textarea>
+                        <input type="submit" value="Gönder" />
                     </form>
                 </div>
             </div>
