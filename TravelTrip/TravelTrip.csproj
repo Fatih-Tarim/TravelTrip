@@ -211,6 +211,8 @@
     <Content Include="web\images\pic7.jpg" />
     <Content Include="web\images\pic8.jpg" />
     <Content Include="web\images\pic9.jpg" />
+    <Content Include="web\images\travel_logo.png" />
+    <Content Include="web\images\travel_logo_1.png" />
     <Content Include="web\index.html" />
     <Content Include="web\js\jquery.min.js" />
     <Content Include="web\js\responsiveslides.min.js" />
@@ -248,6 +250,9 @@
     <Content Include="Views\Blog\BlogDetail.cshtml" />
     <Content Include="Views\Default\Cards.cshtml" />
     <Content Include="Views\Default\RightCard.cshtml" />
+    <Content Include="Views\Default\IndexTop10.cshtml" />
+    <Content Include="Views\Default\BestPLaces.cshtml" />
+    <Content Include="Views\Default\BestPlacesRight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

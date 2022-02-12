@@ -36,8 +36,9 @@
                         <img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
                         <a href="/Blog/BlogDetail/@x.Id">@x.Title</a>
                         <p>
-                            @x.Description
+                            @x.Description.Substring(0, 150)... 
                         </p>
+                        <p><a href="/Blog/BlogDetail/@x.Id"><span class="read">Devamını Oku >></span></a></p>
                     </div>
                 }
             </div>

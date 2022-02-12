@@ -1,0 +1,20 @@
+﻿@using TravelTrip.Models.Classes
+@model List<Blog>
+
+<div class="padding1">
+    <h4>En Beğendiğim Yerler</h4>
+    <div class="box-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img src="@item.BlogImage" alt="" style="width:120px; height:95px;"/>
+            </div>
+            <div class="bot-desc">
+                <p>@item.Description.Substring(0, 70)...</p>
+                <p><a href="/Blog/BlogDetail/@item.Id">Devamını Oku >></a></p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+    @Html.Action("BestPlacesRight", "Default")
+</div>
