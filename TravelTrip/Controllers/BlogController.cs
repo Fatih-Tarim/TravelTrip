@@ -12,12 +12,14 @@ namespace TravelTrip.Controllers
     {
         // GET: Blog
         Context con = new Context();
+        BlogComment bc = new BlogComment();
         public ActionResult Index()
         {
-            var blogs = con.Blogs.ToList();
-            return View(blogs);
-        }
-        BlogComment bc = new BlogComment();
+            //var blogs = con.Blogs.ToList();
+            bc.Value1 = con.Blogs.ToList();
+            bc.LastBlogs = con.Blogs.OrderByDescending(x=>x.Id).Take(4).ToList();
+            return View(bc);
+        }       
         public ActionResult BlogDetail(int id)
         {
             //var FindBlog = con.Blogs.Where(x => x.Id == id).ToList();

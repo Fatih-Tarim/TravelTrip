@@ -1,5 +1,4 @@
-﻿@using TravelTrip.Models.Classes
-@model List<Blog>
+﻿@model TravelTrip.Models.Classes.BlogComment
 
 @{
     ViewBag.Title = "Index";
@@ -31,10 +30,10 @@
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                @foreach(var x in Model)
+                @foreach (var x in Model.Value1)
                 {
                     <div class="single-grid">
-                        <img src="@x.BlogImage" alt="" style="margin-bottom:20px"/>
+                        <img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
                         <a href="/Blog/BlogDetail/@x.Id">@x.Title</a>
                         <p>
                             @x.Description
@@ -45,12 +44,12 @@
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>Son Bloglar</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
+                    @foreach (var a in Model.LastBlogs)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetail/@a.Id">@a.Title</a></li>
+                        </ul>
+                    }
                 </div>
                 <div class="comments">
                     <h3>Son Yorumlar</h3>

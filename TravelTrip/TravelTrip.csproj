@@ -199,6 +199,7 @@
     <Content Include="web\images\key.png" />
     <Content Include="web\images\link1-bg.gif" />
     <Content Include="web\images\logo.png" />
+    <Content Include="web\images\obs_logo.png" />
     <Content Include="web\images\pic.jpg" />
     <Content Include="web\images\pic1.jpg" />
     <Content Include="web\images\pic10.jpg" />
@@ -245,6 +246,8 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\BlogDetail.cshtml" />
+    <Content Include="Views\Default\Cards.cshtml" />
+    <Content Include="Views\Default\RightCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,5 +10,6 @@ namespace TravelTrip.Models.Classes
     {
         public IEnumerable<Blog> Value1 {get; set;}
         public IEnumerable<Comments> Value2 { get; set; }
+        public IEnumerable<Blog> LastBlogs { get; set; }
     }
 }
