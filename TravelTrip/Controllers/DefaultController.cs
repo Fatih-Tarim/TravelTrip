@@ -32,7 +32,7 @@ namespace TravelTrip.Controllers
         }
         public PartialViewResult IndexTop10()
         {
-            var value = con.Blogs.Take(10).ToList();
+            var value = con.Blogs.OrderByDescending(x=>x.Id).Take(10).ToList();
             return PartialView(value);
         }
         public PartialViewResult BestPLaces()
