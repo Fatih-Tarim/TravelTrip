@@ -28,5 +28,27 @@ namespace TravelTrip.Controllers
             con.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteBlog(int id)
+        {
+            var BLogId = con.Blogs.Find(id);
+            con.Blogs.Remove(BLogId);
+            con.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult GetBlog(int id)
+        {
+            var Blog = con.Blogs.Find(id);
+            return View("GetBlog", Blog);
+        }
+        public ActionResult UpdateBlog(Blog blog)
+        {
+            var blg = con.Blogs.Find(blog.Id);
+            blg.Title = blog.Title;
+            blg.Description = blog.Description;
+            blg.Date = blog.Date;
+            blg.BlogImage = blog.BlogImage;
+            con.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
