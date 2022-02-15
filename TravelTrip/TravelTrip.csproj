@@ -183,6 +183,7 @@
     <Content Include="web\css\slider.css" />
     <Content Include="web\css\style.css" />
     <Content Include="web\destinations.html" />
+    <Content Include="web\images\174879.png" />
     <Content Include="web\images\about_banner.jpg" />
     <Content Include="web\images\arrows.png" />
     <Content Include="web\images\but.png" />
@@ -258,6 +259,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\AddBlog.cshtml" />
     <Content Include="Views\Admin\GetBlog.cshtml" />
+    <Content Include="Views\Blog\AddComment.cshtml" />
+    <Content Include="Views\Admin\CommentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

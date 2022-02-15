@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_TestLayout.cshtml";
 }
 
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,7 +35,7 @@
                         <img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
                         <a href="/Blog/BlogDetail/@x.Id">@x.Title</a>
                         <p>
-                            @x.Description.Substring(0, 150)... 
+                            @x.Description.Substring(0,150)... 
                         </p>
                         <p><a href="/Blog/BlogDetail/@x.Id"><span class="read">Devamını Oku >></span></a></p>
                     </div>
