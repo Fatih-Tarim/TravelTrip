@@ -27,8 +27,8 @@
             <td>@item.Mail</td>
             <td>@item.Comment</td>
             <td>@item.Blog.Title</td>
-            <td><a href="" class="btn btn-info btn-sm">Edit</a></td>
-            <td><a href="" class="btn btn-danger btn-sm">Delete</a></td>
+            <td><a href="/Admin/GetComments/@item.Id" class="btn btn-info btn-sm">Edit</a></td>
+            <td><a href="/Admin/DeleteComment/@item.Id" class="btn btn-danger btn-sm">Delete</a></td>
             <td><a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-success btn-sm">View Comment</a></td>
         </tr>
     }

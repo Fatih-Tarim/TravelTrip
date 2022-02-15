@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/weblogin/weblogin Tema/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+
+<body>
+    <div class="padding-all">
+        <div class="header">
+            <h1>Travel Trip Admin Login</h1>
+        </div>
+
+        <div class="design-w3l">
+            <div class="mail-form-agile">
+                @using (Html.BeginForm("Login","Login", FormMethod.Post)) {
+                    <input type="text" name="User" placeholder="User Name" required="" />
+                    <input type="password" name="Password" class="padding" placeholder="Password" required="" />
+                    <input type="submit" value="login">
+                }
+            </div>
+            <div class="clear"> </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2022  Master  Login form. All Rights Reserved | Design by<a href="https://teknoactive.com/">  Tekno Active - c0nqueror</a></p>
+        </div>
+    </div>
+</body>
+</html>
